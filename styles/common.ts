@@ -50,7 +50,7 @@ const JapaneseTitleCSS = styled.div`
   grid-area: 1/1/2/2;
   position: relative;
   h2 {
-    font-size: 2.8vw;
+    font-size: 3vw;
     margin: 0;
     color: white;
   }
