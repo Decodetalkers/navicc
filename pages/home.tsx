@@ -6,6 +6,7 @@ import { Empty, WaveLine } from "~/components/common.tsx";
 import { MenuButton, SideBar, SideBarA } from "~/styles/sidebar.ts";
 
 import { useState } from "preact/hooks";
+import { CenterTitle } from "~/components/centertitle.tsx";
 
 export function Header() {
   return (
@@ -48,7 +49,7 @@ export function Home() {
       <Section1Page />
       <Empty />
       <Section2Page />
-      <WaveLine />
+      <CenterTitle />
     </>
   );
 }
