@@ -1,5 +1,11 @@
 import { PropsWithChildren } from "react";
-import { EmptyPlaceCSS, InlineLinkCSS } from "~/styles/common.ts";
+import {
+  EmptyPlaceCSS,
+  EnglishTitleCSS,
+  InlineLinkCSS,
+  JapaneseTitleCSS,
+  NewsCSS,
+} from "~/styles/common.ts";
 
 export type InlineLinkProps = {
   link: string;
@@ -20,5 +26,29 @@ export function DescriptionInlineLink(
       </a>
       <span class="tooltiptext">{tips}</span>
     </InlineLinkCSS>
+  );
+}
+
+export type TitleProps = {
+  ja: string;
+  en: string;
+};
+
+export function NewsTitle(
+  { ja, en }: TitleProps,
+) {
+  return (
+    <NewsCSS>
+      <JapaneseTitleCSS>
+        <h2>
+          <span>{ja}</span>
+        </h2>
+      </JapaneseTitleCSS>
+      <EnglishTitleCSS>
+        <h1>
+          <span>{en}</span>
+        </h1>
+      </EnglishTitleCSS>
+    </NewsCSS>
   );
 }

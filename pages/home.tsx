@@ -1,7 +1,7 @@
 import { MainTopBar as TitleBar } from "~/components/titlebar.tsx";
 import { Section1Page } from "~/components/section1.tsx";
 import { Section2Page } from "~/components/section2.tsx";
-import { Empty, WaveLine } from "~/components/common.tsx";
+import { Empty, NewsTitle } from "~/components/common.tsx";
 
 import { MenuButton, SideBar, SideBarA } from "~/styles/sidebar.ts";
 
@@ -50,6 +50,7 @@ export function Home() {
       <Empty />
       <Section2Page />
       <CenterTitle />
+      <NewsTitle ja="お知らせ" en="NEWS" />
     </>
   );
 }
