@@ -19,7 +19,7 @@ export const Background = styled.img`
 export const Empty = styled.div`
   position: relative;
   width: 47%;
-`
+`;
 
 export const Text = styled.div`
   height: auto;
@@ -32,5 +32,5 @@ export const Text = styled.div`
   font-weight: bold;
   color: #1b4f80;
   padding: 0;
-  gap: 0
+  gap: 0;
 `;
