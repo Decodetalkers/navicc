@@ -1,5 +1,7 @@
 import { MainTopBar as TitleBar } from "~/components/titlebar.tsx";
 import { Section1Page } from "~/components/section1.tsx";
+import { Section2Page } from "~/components/section2.tsx";
+import { Empty } from "~/components/common.tsx";
 
 import { MenuButton, SideBar, SideBarA } from "~/styles/sidebar.ts";
 
@@ -44,6 +46,8 @@ export function Home() {
         </button>
       </SideBar>
       <Section1Page />
+      <Empty />
+      <Section2Page />
     </>
   );
 }

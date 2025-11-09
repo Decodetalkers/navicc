@@ -1,5 +1,10 @@
 import styled from "@nobody/styled-components-deno";
 
+const EmptyPlace = styled.div`
+  width: 100%;
+  height: 30px;
+`;
+
 const InlineLinkCSS = styled.span`
   position: relative;
   display: inline-block;
@@ -26,4 +31,4 @@ const InlineLinkCSS = styled.span`
   }
 `;
 
-export { InlineLinkCSS };
+export { EmptyPlace as EmptyPlaceCSS, InlineLinkCSS };
