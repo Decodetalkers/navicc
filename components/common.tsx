@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { EmptyPlaceCSS, InlineLinkCSS } from "~/styles/common.ts";
+import { EmptyPlaceCSS, InlineLinkCSS, WaveLineCSS } from "~/styles/common.ts";
 
 export type InlineLinkProps = {
   link: string;
@@ -8,6 +8,10 @@ export type InlineLinkProps = {
 
 export function Empty() {
   return <EmptyPlaceCSS />;
+}
+
+export function WaveLine() {
+  return <WaveLineCSS />;
 }
 
 export function DescriptionInlineLink(

@@ -31,4 +31,13 @@ const InlineLinkCSS = styled.span`
   }
 `;
 
-export { EmptyPlace as EmptyPlaceCSS, InlineLinkCSS };
+const WaveLine = styled.div`
+  width: 100%;
+  background-color: #f6fafd;
+  background-image: url("static/wave.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 35px;
+`;
+
+export { EmptyPlace as EmptyPlaceCSS, InlineLinkCSS, WaveLine as WaveLineCSS };
