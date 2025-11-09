@@ -37,7 +37,7 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
   justify-content: space-between;
   padding: 0 3rem;
   & a {
-    font-size: 10px;
+    font-size: 1wv;
     padding: 14px 16px;
     text-decoration: none;
     flex-direction: row;

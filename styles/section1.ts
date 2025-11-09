@@ -10,7 +10,7 @@ export const Section1Top = styled.section`
 
 export const Background = styled.img`
   height: auto;
-  width: 65%;
+  width: 53%;
   position: relative;
   object-fit: cover;
   z-index: 1;
@@ -18,15 +18,19 @@ export const Background = styled.img`
 
 export const Empty = styled.div`
   position: relative;
-  width: 35%;
+  width: 47%;
 `
 
 export const Text = styled.div`
   height: auto;
   z-index: 3;
-  top: 30%;
-  left: 50%;
+  top: 10%;
+  left: 10%;
   position: absolute;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #1b4f80;
+  padding: 0;
+  gap: 0
 `;
