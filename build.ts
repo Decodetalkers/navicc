@@ -26,57 +26,9 @@ if (release_mode) {
 }
 
 const base_asserts = { path: "static/asserts", alias: "static" };
-const base_doc_asserts = { path: "static/asserts_doc", alias: "static" };
 const css_asserts = { path: "static/styles" };
 
 const scripts: Script[] = [{ src: "main.js" }];
-
-const docroutine = new Route("doc")
-  .appendAssert(base_doc_asserts)
-  .appendAssert(css_asserts)
-  .appendWebPage(
-    new WebPageUnit(
-      "./src/doc/introduction.tsx",
-      [{ type: "header", id: "header" }, { type: "main", id: "mount" }],
-      [{ type: "module", src: "introduction.js" }],
-    )
-      .withTitle("neocmakelsp introduction")
-      .withLinkInfos([
-        { type: "stylesheet", href: "styles/global.css" },
-        { type: "icon", href: "favicon.ico" },
-      ])
-      .withHotReload(!release_mode),
-  )
-  .appendWebPage(
-    new WebPageUnit(
-      "./src/doc/installdoc.tsx",
-      [{ type: "header", id: "header" }, { type: "main", id: "mount" }],
-      [{ type: "module", src: "installdoc.js" }],
-    )
-      .withTitle("How to Install")
-      .withLinkInfos([
-        { type: "stylesheet", href: "styles/global.css" },
-        { type: "icon", href: "favicon.ico" },
-      ])
-      .withHtmlName("install.html")
-      .withHotReload(!release_mode),
-  )
-  .appendWebPage(
-    new WebPageUnit(
-      "./src/doc/usagedoc.tsx",
-      [{ type: "header", id: "header" }, { type: "main", id: "mount" }],
-      [{ type: "module", src: "usagedoc.js" }],
-    )
-      .withTitle("How to use")
-      .withLinkInfos([
-        { type: "stylesheet", href: "styles/global.css" },
-        { type: "icon", href: "favicon.ico" },
-      ])
-      .withHtmlName("usage.html")
-      .withHotReload(!release_mode),
-  )
-  .withHotReload(!release_mode)
-  .appendAssert({ path: "./static/asserts/favicon.ico" });
 
 const homeroute = new Route(route_path)
   .appendAssert(base_asserts)
@@ -86,18 +38,16 @@ const homeroute = new Route(route_path)
       "./src/main.tsx",
       [
         { type: "main", id: "mount" },
-        { type: "header", id: "header" },
       ],
       scripts,
     )
-      .withTitle("neocmakelsp")
+      .withTitle("navicc")
       .withLinkInfos([
         { type: "stylesheet", href: "styles/global.css" },
         { type: "icon", href: "static/favicon.ico" },
       ])
       .withHotReload(!release_mode),
   )
-  .appendRoute(docroutine)
   .withHotReload(!release_mode);
 
 const webgen = new GenWebsite();
