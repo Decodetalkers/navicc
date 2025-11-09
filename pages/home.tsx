@@ -52,6 +52,7 @@ export function Home() {
       <CenterTitle />
       <NewsTitle ja="お知らせ" en="NEWS" />
       <NewsTitle ja="ソーシャルメディア" en="SOCIAL MEDIA" />
+      <NewsTitle ja="外部リンク" en="LINK" />
     </>
   );
 }
