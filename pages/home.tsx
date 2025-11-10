@@ -8,6 +8,7 @@ import { MenuButton, SideBar, SideBarA } from "~/styles/sidebar.ts";
 import { useState } from "preact/hooks";
 import { CenterTitle } from "~/components/centertitle.tsx";
 import { SliderSection } from "~/components/slidersession.tsx";
+import { NewsMainArea } from "~/components/newsarea.tsx";
 
 export function Header() {
   return (
@@ -52,6 +53,7 @@ export function Home() {
       <Section2Page />
       <CenterTitle />
       <NewsTitle ja="お知らせ" en="NEWS" />
+      <NewsMainArea />
       <NewsTitle ja="ソーシャルメディア" en="SOCIAL MEDIA" />
       <SliderSection />
       <NewsTitle ja="外部リンク" en="LINK" />

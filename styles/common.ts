@@ -43,14 +43,13 @@ const JapaneseTitleCSS = styled.div`
   text-align: left;
   margin-left: 12%;
   height: auto;
-  width: 28%;
   align-self: center;
   justify-self: start;
   margin-bottom: 0%;
   grid-area: 1/1/2/2;
   position: relative;
   h2 {
-    font-size: 3vw;
+    font-size: 6vw;
     margin: 0;
     color: white;
   }
