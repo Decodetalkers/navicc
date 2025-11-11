@@ -11,6 +11,7 @@ import { SliderSection } from "~/components/slidersession.tsx";
 import { NewsMainArea } from "~/components/newsarea.tsx";
 import { LinkSectionArea } from "~/components/Link.tsx";
 import { CenterArea } from "~/components/centersession.tsx";
+import { Foot } from "~/components/foot.tsx";
 
 export function Header() {
   return (
@@ -62,6 +63,7 @@ export function Home() {
       <SliderSection />
       <NewsTitle ja="外部リンク" en="LINK" />
       <LinkSectionArea />
+      <Foot />
     </>
   );
 }
