@@ -1,4 +1,4 @@
-import styled from "@nobody/styled-components-deno";
+import styled, { StyleGroup } from "@nobody/styled-components-deno";
 
 const Header = styled.header`
   background-color: white;
@@ -7,6 +7,8 @@ const Header = styled.header`
   display: grid;
   grid-template_columns: auto auto;
   margin-left: 10px;
+  z-index: 10;
+  overflow: visible;
 `;
 
 const Icon = styled.div`
@@ -17,15 +19,36 @@ const Icon = styled.div`
   }
 `;
 
+const DropDownGroup = ["dropDown"] as const;
+
+const dropDownGen = new StyleGroup(DropDownGroup, "dropDown");
+
+dropDownGen.setCSS("dropDown")`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  & a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+  }
+`;
+
+export const DropDownCSS = dropDownGen.generate();
+
 const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
   backdrop-filter: blur(10px);
-  overflow: hidden;
   background-color: ${({ isdark }) => {
     if (isdark) {
       return "#111111";
     }
     return "white";
   }};
+  overflow: visible;
   margin-left: 0;
   margin-right: 0;
   grid-column: 2/2;
@@ -43,6 +66,11 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
     flex-direction: row;
     box-sizing: border-box;
     color: #4e7295ff;
+    overflow: visible;
+    z-index: 999;
+  }
+  & a:hover .dropDown {
+    display: block;
   }
 
   @media screen and (max-width: 900px) {

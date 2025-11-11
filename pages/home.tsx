@@ -16,7 +16,14 @@ import { Foot } from "~/components/foot.tsx";
 export function Header() {
   return (
     <TitleBar>
-      <a href="#main">事業紹介</a>
+      <a href="#main">
+        事業紹介
+        <div class="dropDown">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </a>
       <a href="#feature">お知らせ</a>
       <a href="#install">会社情報</a>
       <a href="/doc">採用情報</a>
