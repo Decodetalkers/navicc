@@ -13,10 +13,10 @@ export const NewsContent = styled.div`
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: auto;
   align-items: center;
-  padding: 10px;
-  gap: 1px;
-  column-gap: 30px;
+  gap: 4px;
 `;
 
 export const UnitImg = styled.img`

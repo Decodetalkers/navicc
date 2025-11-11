@@ -6,8 +6,8 @@ export const LinkSection = styled.section`
 
 export const GridContainer = styled.div`
   display: grid;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
   margin-top: 3%;
   margin-bottom: 3%;
   grid-template-columns: auto auto auto auto auto auto auto;
