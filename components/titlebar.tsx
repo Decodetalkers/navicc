@@ -1,11 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import TopBarClass, {
-  Header,
-  Icon,
-  MainIcon,
-  MinIcon,
-} from "~/styles/topbar.ts";
+import TopBarClass, { Header, Icon } from "~/styles/topbar.ts";
 
 export function MainTopBar(
   { children }: PropsWithChildren,
@@ -23,12 +18,7 @@ export function MainTopBar(
 export function IconPart() {
   return (
     <Icon>
-      <MainIcon>
-        NAVIC <span style={{ fontSize: 25 }}>Inc.</span>
-      </MainIcon>
-      <MinIcon>
-        ～ 新しいことにチャレンジし続ける ～
-      </MinIcon>
+      <img src="static/navic_logo.png" />
     </Icon>
   );
 }

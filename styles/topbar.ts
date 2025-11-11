@@ -6,24 +6,17 @@ const Header = styled.header`
   height: auto;
   display: grid;
   grid-template_columns: auto auto;
-  margin-left: 20px;
+  margin-left: 10px;
 `;
 
 const Icon = styled.div`
   font-weight: bold;
-  float: left;
+  margin-top: 10px;
+  & img {
+    width: 250px;
+  }
 `;
 
-const MainIcon = styled.div`
-  margin-top: 10px;
-  font-size: 50px;
-  color: #1b4f80;
-  grid-column: 2/2;
-  grid-row: 1;
-`;
-const MinIcon = styled.div`
-  font-size: 12px;
-`;
 const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
   backdrop-filter: blur(10px);
   overflow: hidden;
@@ -43,7 +36,6 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
   height: auto;
   visibility: visible;
   justify-content: center;
-  padding: 0 0;
   & a {
     font-size: 1.4vw;
     padding: 14px 20px;
@@ -64,4 +56,4 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
 
 export default TopBar;
 
-export { Header, Icon, MainIcon, MinIcon };
+export { Header, Icon };
