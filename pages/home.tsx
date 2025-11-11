@@ -10,6 +10,7 @@ import { CenterTitle } from "~/components/centertitle.tsx";
 import { SliderSection } from "~/components/slidersession.tsx";
 import { NewsMainArea } from "~/components/newsarea.tsx";
 import { LinkSectionArea } from "~/components/Link.tsx";
+import { CenterArea } from "~/components/centersession.tsx";
 
 export function Header() {
   return (
@@ -53,6 +54,7 @@ export function Home() {
       <Empty />
       <Section2Page />
       <CenterTitle />
+      <CenterArea />
       <NewsTitle ja="お知らせ" en="NEWS" />
       <NewsMainArea />
       <NewsTitle ja="ソーシャルメディア" en="SOCIAL MEDIA" />
