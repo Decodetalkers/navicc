@@ -14,11 +14,17 @@ export const Background = styled.img`
   position: relative;
   object-fit: cover;
   z-index: 1;
+  @media screen and (max-width: 900px) {
+    width: 70%;
+  }
 `;
 
 export const Empty = styled.div`
   position: relative;
   width: 47%;
+  @media screen and (max-width: 900px) {
+    width: 30%;
+  }
 `;
 
 export const Text = styled.div`
