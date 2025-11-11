@@ -24,3 +24,8 @@ export const CenterLogo = styled.div`
     width: 60%;
   }
 `;
+
+export const Circle = styled.div<{ position: string }>`
+  aspect-radio: 1;
+  grid-area: 1/1/2/2
+`;

@@ -20,6 +20,7 @@ export function Header() {
       <a href="#install">会社情報</a>
       <a href="/doc">採用情報</a>
       <a href="/doc">ソーシャルメディア</a>
+      <a href="/doc">お問い合わせ</a>
       <a href="/doc">公式ショップ</a>
     </TitleBar>
   );
