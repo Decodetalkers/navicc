@@ -23,6 +23,9 @@ export const CenterTitleCSS = styled.div`
     margin-top: 0px;
     font-size: 1.5vw;
     color: #14508cff;
+    @media screen and (max-width: 900px) {
+      visibility: hidden;
+    }
   }
 `;
 

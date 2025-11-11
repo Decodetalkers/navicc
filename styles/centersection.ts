@@ -7,7 +7,6 @@ export const CenterSection = styled.section`
   pointer-event: auto;
   grid-template_columns: minmax(0px, 1fr);
   background-color: #d1e2f0ff;
-  height: 500px;
   width: 100%;
 `;
 
@@ -25,7 +24,19 @@ export const CenterLogo = styled.div`
   }
 `;
 
-export const Circle = styled.div<{ position: string }>`
-  aspect-radio: 1;
-  grid-area: 1/1/2/2
+export const Circle = styled.div`
+  aspect-ratio: 1;
+  height: auto;
+  grid-area: 1/1/2/2;
+  align-self: start;
+  justify-self: start;
+  margin-left: ${50 - 13}%;
+  margin-top: 13%;
+  margin-bottom: 70%;
+  margin-right: 0%;
+  width: 13%;
+  position: relative;
+  & img {
+    border-radius: 50%;
+  }
 `;

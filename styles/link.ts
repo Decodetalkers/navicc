@@ -14,6 +14,9 @@ export const GridContainer = styled.div`
   margin-bottom: 3%;
   grid-template-columns: auto auto auto auto auto auto auto;
   gap: 4px;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: auto auto;
+  }
 `;
 
 export const UnitDiv = styled.div`
