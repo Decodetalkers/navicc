@@ -3,7 +3,15 @@ import { Section1Page } from "~/components/section1.tsx";
 import { Section2Page } from "~/components/section2.tsx";
 import { Empty, NewsTitle } from "~/components/common.tsx";
 
-import { MenuButton, SideBar, SideBarA } from "~/styles/sidebar.ts";
+import {
+  Arrow,
+  CloseButton,
+  Label,
+  MenuButton,
+  MenuList,
+  SideBar,
+  SideBarA,
+} from "~/styles/sidebar.ts";
 
 import { useState } from "preact/hooks";
 import { CenterTitle } from "~/components/centertitle.tsx";
@@ -39,25 +47,26 @@ export function Home() {
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
-  const backString = "<<";
   return (
     <>
       <Header />
       <MenuButton isOpen={isOpen} onClick={() => toggleOpen()} />
-      <SideBar isOpen={isOpen} autohide>
-        <SideBarA href="#main">Neocmakelsp</SideBarA>
-        <SideBarA href="#feature">Features</SideBarA>
-        <SideBarA href="#install">Install</SideBarA>
-        <SideBarA href="/doc">Document</SideBarA>
-        <SideBarA
-          isBottom
-          href="https://github.com/neocmakelsp/neocmakelsp"
-        >
-          Github
-        </SideBarA>
-        <button type="button" class="bottom" onClick={() => toggleOpen()}>
-          {backString}
-        </button>
+      <SideBar isOpen autohide>
+        <CloseButton type="button">
+          x
+        </CloseButton>
+
+        <MenuList>
+          <Label>
+            sss
+          </Label>
+          <Arrow type="button">x</Arrow>
+        </MenuList>
+        <MenuList>
+          <Label>
+            sss
+          </Label>
+        </MenuList>
       </SideBar>
       <Section1Page />
       <Empty />

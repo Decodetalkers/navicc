@@ -1,37 +1,32 @@
 import styled from "@nobody/styled-components-deno";
 
-const SideBar = styled.li<
+const SideBar = styled.div<
   {
     isOpen?: boolean;
     autohide?: boolean;
     zIndex?: number;
     top?: string;
-    width?: number;
   }
 >`
-  backdrop-filter: blur(10px);
-  width: ${({ width }) => width ? width : 180}px;
+  width: 100%;
   height: 100%;
-  background-color: #333330aa;
+  background-color: white;
   position: fixed;
   top: ${({ top }) => top ? top : 0}px;
-  z-index: ${({ zIndex }) => zIndex ? zIndex : 3};
+  z-index: ${({ zIndex }) => zIndex ? zIndex : 8};
   visibility: ${({ autohide }) => autohide ? "hidden" : "visible"};
   list-style-type: none;
   display: flex;
   /* move flex-items in column */
   flex-direction: column;
 
-  left: ${({ isOpen }) => isOpen ? "0" : "-200px"};
-  transition: left 0.3s ease-in-out;
+  right: ${({ isOpen }) => isOpen ? "0" : "-100%"};
+  transition: right 0.3s ease-in-out;
 
   @media screen and (max-width: 900px) {
     visibility: visible;
   }
   & button {
-    background-color: transparent;
-    border-width: 0;
-    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -42,6 +37,35 @@ const SideBar = styled.li<
     background-color: #ddd;
     color: black;
   }
+`;
+
+export const CloseButton = styled.button`
+  height: 50px;
+  width: 50px;
+  position: sticky;
+  margin-right: 40px;
+  margin-left: 85%;
+  margin-top: 40px;
+  color: blue;
+`;
+
+export const MenuList = styled.nav`
+  height: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: " arrow label";
+  gap: 2px;
+`;
+
+export const Label = styled.span`
+  grid-area: label;
+`;
+
+export const Arrow = styled.button`
+  grid-area: arrow;
+  width: 40px;
 `;
 
 const SideBarA = styled.a<{ isBottom?: boolean }>`
@@ -58,11 +82,11 @@ const SideBarA = styled.a<{ isBottom?: boolean }>`
 `;
 
 const MenuButton = styled.button<
-  { isOpen?: boolean; alwaysShown?: boolean; top?: number; left?: number }
+  { isOpen?: boolean; alwaysShown?: boolean; top?: number }
 >`
   position: fixed;
   top: ${({ top }) => top ? top : 20}px;
-  left: ${({ isOpen, left }) => isOpen ? left ? left : 210 : 20}px;
+  right: 20px;
   background-color: white;
   color: white;
   border: none;
