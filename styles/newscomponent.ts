@@ -16,6 +16,7 @@ export const NewsContent = styled.div`
   align-items: center;
   padding: 10px;
   gap: 1px;
+  column-gap: 30px;
 `;
 
 export const UnitImg = styled.img`
@@ -28,6 +29,7 @@ export const UnitImg = styled.img`
 export const Text = styled.div`
   width: 80%;
   margin-left: 8px;
+  overflow: clip;
   & h1 {
     font-size: 20px;
     color: #32679bff;

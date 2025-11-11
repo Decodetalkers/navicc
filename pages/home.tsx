@@ -9,6 +9,7 @@ import { useState } from "preact/hooks";
 import { CenterTitle } from "~/components/centertitle.tsx";
 import { SliderSection } from "~/components/slidersession.tsx";
 import { NewsMainArea } from "~/components/newsarea.tsx";
+import { LinkSectionArea } from "~/components/Link.tsx";
 
 export function Header() {
   return (
@@ -57,6 +58,7 @@ export function Home() {
       <NewsTitle ja="ソーシャルメディア" en="SOCIAL MEDIA" />
       <SliderSection />
       <NewsTitle ja="外部リンク" en="LINK" />
+      <LinkSectionArea />
     </>
   );
 }
