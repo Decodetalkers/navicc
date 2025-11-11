@@ -1,19 +1,88 @@
-import { GridContainer, LinkSection } from "~/styles/link.ts";
+import {
+  GridContainer,
+  LinkSection,
+  UnitDiv,
+  UnitImg,
+  UnitImgDiv,
+  UnitText,
+} from "~/styles/link.ts";
+
+function UnitImage({ src }: { src: string }) {
+  return (
+    <UnitImgDiv>
+      <UnitImg src={src} />
+    </UnitImgDiv>
+  );
+}
 
 export function LinkSectionArea() {
   return (
     <LinkSection>
       <GridContainer>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
+        <UnitDiv>
+          <UnitImage src="static/mv2.jpg" />
+          <UnitText>
+            <h1>
+              レンタル事業
+            </h1>
+          </UnitText>
+        </UnitDiv>
       </GridContainer>
     </LinkSection>
   );
