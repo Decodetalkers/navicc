@@ -24,6 +24,7 @@ export const CenterLogo = styled.div`
   }
 `;
 
+// deno-fmt-ignore
 export const Circle = styled.div`
   aspect-ratio: 1;
   height: auto;
