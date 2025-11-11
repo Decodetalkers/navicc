@@ -18,12 +18,30 @@ export const CenterLogo = styled.div`
   position: relative;
   display: flex;
   height: auto;
+
   & img {
     object-fit: cover;
     width: 45%;
   }
 `;
-
+export const CenterSvg = styled.div`
+  grid-area: 1/1/2/2;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  height: auto;
+  width: 64%;
+  aspect-ratio: 1;
+  background: transparent;
+  & svg {
+    width: 100%;
+    height: 100%;
+    fill-opacity: 0;
+    stroke: #14508cff;
+    stroke-width: 2px;
+  }
+`;
 type Position = {
   left: number;
   right: number;
@@ -34,7 +52,7 @@ type Position = {
 function getPosition(place?: number): Position {
   switch (place) {
     case 0:
-      return { left: 42, right: 0, bottom: 62, top: 6 };
+      return { left: 41, right: 0, bottom: 62, top: 6 };
     case 1:
       return { left: 20, right: 0, bottom: 53, top: 15 };
     case 2:
@@ -42,11 +60,11 @@ function getPosition(place?: number): Position {
     case 3:
       return { left: 20, right: 0, bottom: 15, top: 56 };
     case 4:
-      return { left: 42, right: 0, bottom: 8, top: 64 };
+      return { left: 41, right: 0, bottom: 8, top: 64 };
     case 5:
       return { left: 64, right: 0, bottom: 15, top: 56 };
     case 6:
-      return { left: 74, right: 0, bottom: 0, top: 34 };
+      return { left: 72, right: 0, bottom: 0, top: 34 };
     default:
       return { left: 62, right: 0, bottom: 53, top: 15 };
   }
@@ -56,8 +74,7 @@ function getPosition(place?: number): Position {
 export const Circle = styled.div<{place?: number}>`
   aspect-ratio: 1;
   height: auto;
-  width: auto;
-  display: flex;
+  display: grid;
   grid-area: 1/1/2/2;
   align-self: start;
   justify-self: start;
@@ -73,8 +90,23 @@ export const Circle = styled.div<{place?: number}>`
   margin-right: ${({place}) => {
     return getPosition(place).right
   }}%;
-  width: 16%;
+  width: 18%;
   position: relative;
   border-radius: 50%;
-  background-image: url("static/white.jpg")
+  background-color: white;
+  align-items: center;
+`;
+
+export const CircleText = styled.div`
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #053769ff;
+  width: 100%;
+  font-size: 15px;
+  gap: 0;
+  margin: 0;
+  & h1 {
+    margin: 0;
+  }
 `;
