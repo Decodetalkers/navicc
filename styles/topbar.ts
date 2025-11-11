@@ -37,11 +37,12 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
   visibility: visible;
   justify-content: center;
   & a {
-    font-size: 1.4vw;
-    padding: 14px 20px;
+    font-size: 1.5vw;
+    padding: 14px 15px;
     text-decoration: none;
     flex-direction: row;
     box-sizing: border-box;
+    color: #4e7295ff;
   }
 
   @media screen and (max-width: 900px) {
