@@ -21,7 +21,12 @@ export const CenterLogo = styled.div`
 
   & img {
     object-fit: cover;
-    width: 45%;
+    width: 65%;
+  }
+  @media screen and (max-width: 900px) {
+    & img {
+      width: 45%;
+    }
   }
 `;
 export const CenterSvg = styled.div`
@@ -39,7 +44,7 @@ export const CenterSvg = styled.div`
     height: 100%;
     fill-opacity: 0;
     stroke: #14508cff;
-    stroke-width: 2px;
+    stroke-width: 1px;
   }
 `;
 type Position = {
@@ -95,6 +100,7 @@ export const Circle = styled.div<{place?: number}>`
   border-radius: 50%;
   background-color: white;
   align-items: center;
+  overflow: clip;
 `;
 
 export const CircleText = styled.div`
@@ -103,11 +109,30 @@ export const CircleText = styled.div`
   justify-content: center;
   color: #053769ff;
   width: 100%;
-  font-size: 15px;
   gap: 0;
   margin: 0;
-  & h1 {
+  padding: 0;
+  & h2 {
+    font-size: 33px;
+    font-weight: bold;
     margin: 0;
+  }
+
+  & br {
+    content: "";
+    display: block;
+  }
+  & img {
+    margin: 0;
+    width: 80%;
+  }
+  @media screen and (max-width: 900px) {
+    & h2 {
+      font-size: 22px;
+    }
+    & img {
+      width: 60%;
+    }
   }
   position: relative;
 `;
