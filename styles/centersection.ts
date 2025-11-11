@@ -52,19 +52,19 @@ type Position = {
 function getPosition(place?: number): Position {
   switch (place) {
     case 0:
-      return { left: 41, right: 0, bottom: 62, top: 6 };
+      return { left: 40, right: 0, bottom: 62, top: 6 };
     case 1:
       return { left: 20, right: 0, bottom: 53, top: 15 };
     case 2:
-      return { left: 10, right: 0, bottom: 0, top: 34 };
+      return { left: 10, right: 0, bottom: 0, top: 36 };
     case 3:
       return { left: 20, right: 0, bottom: 15, top: 56 };
     case 4:
-      return { left: 41, right: 0, bottom: 8, top: 64 };
+      return { left: 40, right: 0, bottom: 8, top: 64 };
     case 5:
       return { left: 64, right: 0, bottom: 15, top: 56 };
     case 6:
-      return { left: 72, right: 0, bottom: 0, top: 34 };
+      return { left: 72, right: 0, bottom: 0, top: 36 };
     default:
       return { left: 62, right: 0, bottom: 53, top: 15 };
   }
@@ -90,7 +90,7 @@ export const Circle = styled.div<{place?: number}>`
   margin-right: ${({place}) => {
     return getPosition(place).right
   }}%;
-  width: 18%;
+  width: 20%;
   position: relative;
   border-radius: 50%;
   background-color: white;
@@ -109,4 +109,5 @@ export const CircleText = styled.div`
   & h1 {
     margin: 0;
   }
+  position: relative;
 `;
