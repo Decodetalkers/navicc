@@ -13,10 +13,12 @@ export const CenterTitleCSS = styled.div`
   width: 100%;
   padding: 0;
   margin-top: 0;
+  margin-bottom: 0;
   & h1 {
     margin: 1px;
-    font-size: 5vw;
+    font-size: 9vw;
     color: #73acdeff;
+    margin-bottom: 0;
   }
   & h5 {
     margin-bottom: 40px;
@@ -25,6 +27,7 @@ export const CenterTitleCSS = styled.div`
     color: #14508cff;
     @media screen and (max-width: 900px) {
       visibility: hidden;
+      margin-bottom: 10px;
     }
   }
 `;
