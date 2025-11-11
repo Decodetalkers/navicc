@@ -18,7 +18,9 @@ export function MainTopBar(
 export function IconPart() {
   return (
     <Icon>
-      <img src="static/navic_logo.png" />
+      <a href="https://www.navic.cc/">
+        <img src="static/navic_logo.png" />
+      </a>
     </Icon>
   );
 }
