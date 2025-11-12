@@ -43,8 +43,8 @@ export const CloseButton = styled.div`
   height: 50px;
   width: 50px;
   position: sticky;
-  margin-right: 40px;
-  margin-left: 85%;
+  margin-right: 60px;
+  margin-left: 75%;
   margin-top: 40px;
   color: blue;
   background-image: url("static/cross.svg");
