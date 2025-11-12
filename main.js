@@ -400,20 +400,27 @@ var K,m,je,nn,$,we,Ne,Ee,Te,le,se,ce,rn,B={},Le=[],on=/acit|ex(?:s|g|n|p|$)|rph|
 `;function Lt(){return n(Nt,{children:[n(Tt,{}),n(Et,{children:[n("h1",{children:"NAVIC\u306E\u53D6\u308A\u7D44\u307F"}),n("h5",{children:"OUR SERVICE"})]})]})}var Mt=d.section`
   overflow: hidden;
   position: relative;
-  display: flex;
-  border: 5px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 12fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 7fr 1fr;
   overflow-x: auto;
   max-width: var(--container-xl);
 `,At=d.div`
   display: flex;
-  gap: 1em;
-  justify-content: center;
-  align-items: center;
-  animation: spin 5s infinite linear;
+  gap: 15em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  grid-column: 4;
+  grid-row: 2;
+  & img {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+  scrollbar-width: none;
 `;he("spin")`
   from { translate: 0; }
   to { translate: -100% }
-`;function Pt(){return n(Mt,{children:n(At,{children:[n("img",{src:"static/mv2.jpg"}),n("img",{src:"static/mv2.jpg"}),n("img",{src:"static/mv2.jpg"}),n("img",{src:"static/mv2.jpg"}),n("img",{src:"static/mv2.jpg"})]})})}var $t=d.section`
+`;function Pt(){return n(Mt,{children:n(At,{children:[n("img",{src:"static/display.jpg"}),n("img",{src:"static/display.jpg"}),n("img",{src:"static/display.jpg"}),n("img",{src:"static/display.jpg"}),n("img",{src:"static/display.jpg"}),n("img",{src:"static/display.jpg"})]})})}var $t=d.section`
   display: grid;
   grid-area: 8/1/9/2;
   grid-template-columns: repeat(15, 1fr);
