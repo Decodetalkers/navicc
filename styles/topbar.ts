@@ -48,7 +48,6 @@ dropDownGen.setCSS("dropDown")`
 export const DropDownCSS = dropDownGen.generate();
 
 const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
-  backdrop-filter: blur(10px);
   background-color: ${({ isdark }) => {
     if (isdark) {
       return "#111111";
