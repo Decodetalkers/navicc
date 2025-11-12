@@ -30,28 +30,28 @@ export const Sliders = styled.div`
 `;
 
 export const LeftButton = styled.button`
-  background-color: white;
   cursor: pointer;
   height: 50px;
   width: 50px;
   grid-row: 5;
   grid-column: 2;
-  background-image: url("static/cross.svg");
+  background-image: url("static/arrow-left.svg");
   background-position: center;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   border: none;
   border-radius: 50%;
 `;
 
 export const RightButton = styled.button`
-  background-color: white;
   cursor: pointer;
   height: 50px;
   width: 50px;
   grid-row: 5;
   grid-column: 6;
-  background-image: url("static/cross.svg");
+  background-image: url("static/arrow-right.svg");
   background-position: center;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   border: none;
   border-radius: 50%;
