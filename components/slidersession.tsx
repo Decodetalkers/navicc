@@ -4,11 +4,12 @@ export function SliderSection() {
   return (
     <SectionSlider>
       <Sliders>
-        <img src="static/mv2.jpg" />
-        <img src="static/mv2.jpg" />
-        <img src="static/mv2.jpg" />
-        <img src="static/mv2.jpg" />
-        <img src="static/mv2.jpg" />
+        <img src="static/display.jpg" />
+        <img src="static/display.jpg" />
+        <img src="static/display.jpg" />
+        <img src="static/display.jpg" />
+        <img src="static/display.jpg" />
+        <img src="static/display.jpg" />
       </Sliders>
     </SectionSlider>
   );
