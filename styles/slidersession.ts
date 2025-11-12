@@ -1,4 +1,4 @@
-import styled, { setAnimation } from "@nobody/styled-components-deno";
+import styled from "@nobody/styled-components-deno";
 
 export const SectionSlider = styled.section`
   overflow: hidden;
@@ -34,6 +34,7 @@ export const LeftButton = styled.button`
   width: 50px;
   grid-row: 5;
   grid-column: 2;
+  margin-left: 25px;
   background-image: url("static/arrow-left.svg");
   background-position: center;
   background-size: 20px 20px;
@@ -48,15 +49,11 @@ export const RightButton = styled.button`
   width: 50px;
   grid-row: 5;
   grid-column: 6;
+  margin-left: 25px;
   background-image: url("static/arrow-right.svg");
   background-position: center;
   background-size: 20px 20px;
   background-repeat: no-repeat;
   border: none;
   border-radius: 50%;
-`;
-
-setAnimation("spin")`
-  from { translate: 0; }
-  to { translate: -100% }
 `;
