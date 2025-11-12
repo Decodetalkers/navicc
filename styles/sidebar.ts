@@ -50,22 +50,44 @@ export const CloseButton = styled.button`
 `;
 
 export const MenuList = styled.nav`
-  height: auto;
   margin-left: 15%;
   margin-right: 15%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: " arrow label";
-  gap: 2px;
+  grid-template-columns: 1fr 1fr 7fr 1fr;
+  gap: 4px;
 `;
 
-export const Label = styled.span`
-  grid-area: label;
+export const Label = styled.span<{ hidden?: boolean }>`
+  text-align: center;
+  grid-column: 3;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #73acdeff;
+  visibility: ${({ hidden }) => hidden ? "hidden" : "visible"};
+  cursor: pointer;
+  & a {
+    font-size: 15px;
+    color: #73acdeff;
+    text-decoration: none;
+  }
 `;
-
+export const NormalLabel = styled.span`
+  text-align: center;
+  grid-column: 3;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #73acdeff;
+  & a {
+    color: #73acdeff;
+    text-decoration: none;
+  }
+`;
 export const Arrow = styled.button`
-  grid-area: arrow;
-  width: 40px;
+  grid-column: 2;
+  width: 20px;
+  height: 20px;
 `;
 
 const SideBarA = styled.a<{ isBottom?: boolean }>`

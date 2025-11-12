@@ -10,7 +10,6 @@ import {
   MenuButton,
   MenuList,
   SideBar,
-  SideBarA,
 } from "~/styles/sidebar.ts";
 
 import { useState } from "preact/hooks";
@@ -20,6 +19,7 @@ import { NewsMainArea } from "~/components/newsarea.tsx";
 import { LinkSectionArea } from "~/components/Link.tsx";
 import { CenterArea } from "~/components/centersession.tsx";
 import { Foot } from "~/components/foot.tsx";
+import { SideMenu } from "~/components/sidebar.tsx";
 
 export function Header() {
   return (
@@ -55,18 +55,7 @@ export function Home() {
         <CloseButton type="button">
           x
         </CloseButton>
-
-        <MenuList>
-          <Label>
-            sss
-          </Label>
-          <Arrow type="button">x</Arrow>
-        </MenuList>
-        <MenuList>
-          <Label>
-            sss
-          </Label>
-        </MenuList>
+        <SideMenu/>
       </SideBar>
       <Section1Page />
       <Empty />
