@@ -3,14 +3,7 @@ import { Section1Page } from "~/components/section1.tsx";
 import { Section2Page } from "~/components/section2.tsx";
 import { Empty, NewsTitle } from "~/components/common.tsx";
 
-import {
-  Arrow,
-  CloseButton,
-  Label,
-  MenuButton,
-  MenuList,
-  SideBar,
-} from "~/styles/sidebar.ts";
+import { CloseButton, MenuButton, SideBar } from "~/styles/sidebar.ts";
 
 import { useState } from "preact/hooks";
 import { CenterTitle } from "~/components/centertitle.tsx";
@@ -51,11 +44,11 @@ export function Home() {
     <>
       <Header />
       <MenuButton isOpen={isOpen} onClick={() => toggleOpen()} />
-      <SideBar isOpen autohide>
-        <CloseButton type="button">
+      <SideBar isOpen={isOpen} autohide>
+        <CloseButton type="button" onClick={toggleOpen}>
           x
         </CloseButton>
-        <SideMenu/>
+        <SideMenu />
       </SideBar>
       <Section1Page />
       <Empty />
