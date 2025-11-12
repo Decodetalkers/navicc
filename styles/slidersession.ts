@@ -4,9 +4,10 @@ export const SectionSlider = styled.section`
   overflow: hidden;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 12fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 7fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 6fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   overflow-x: auto;
+
   max-width: var(--container-xl);
 `;
 
@@ -16,12 +17,44 @@ export const Sliders = styled.div`
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   grid-column: 4;
-  grid-row: 2;
+  grid-row: 2/9;
+  //border: 5px solid red;
   & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     flex: 0 0 100%;
     scroll-snap-align: center;
   }
   scrollbar-width: none;
+`;
+
+export const LeftButton = styled.button`
+  background-color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  grid-row: 5;
+  grid-column: 2;
+  background-image: url("static/cross.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+`;
+
+export const RightButton = styled.button`
+  background-color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  grid-row: 5;
+  grid-column: 6;
+  background-image: url("static/cross.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
 `;
 
 setAnimation("spin")`

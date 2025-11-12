@@ -1,8 +1,14 @@
-import { SectionSlider, Sliders } from "~/styles/slidersession.ts";
+import {
+  LeftButton,
+  RightButton,
+  SectionSlider,
+  Sliders,
+} from "~/styles/slidersession.ts";
 
 export function SliderSection() {
   return (
     <SectionSlider>
+      <LeftButton />
       <Sliders>
         <img src="static/display.jpg" />
         <img src="static/display.jpg" />
@@ -11,6 +17,7 @@ export function SliderSection() {
         <img src="static/display.jpg" />
         <img src="static/display.jpg" />
       </Sliders>
+      <RightButton />
     </SectionSlider>
   );
 }
