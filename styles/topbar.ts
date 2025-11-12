@@ -35,13 +35,16 @@ dropDownGen.setCSS("dropDown")`
   position: absolute;
   background-color: #f9f9f9;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1000;
+  color: #4e7295ff;
   & a {
    color: black;
    padding: 12px 16px;
    text-decoration: none;
    display: block;
+  }
+  & a:hover {
+    background-color: #14508cff;
   }
 `;
 
@@ -73,6 +76,9 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
     box-sizing: border-box;
     color: #4e7295ff;
     overflow: visible;
+  }
+  & a:hover {
+    color: #4e72e5ff;
   }
   & a:hover .dropDown {
     display: block;

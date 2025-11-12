@@ -1,4 +1,24 @@
-import styled from "@nobody/styled-components-deno";
+import styled, { StyleGroup } from "@nobody/styled-components-deno";
+
+const styledKeys = ["fade-in-section", "is-visible"] as const;
+
+const style = new StyleGroup(styledKeys, "fade-in-section");
+
+style.setCSS("fade-in-section")`
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ;
+  will-change: opacity, visibility;
+  margin: 0;
+`;
+style.setCSS("is-visible")`
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+`;
+
+export const fadeCSS = style.generate();
 
 const EmptyPlaceCSS = styled.div`
   width: 100%;

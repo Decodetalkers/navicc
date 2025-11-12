@@ -1,7 +1,7 @@
 import { MainTopBar as TitleBar } from "~/components/titlebar.tsx";
 import { Section1Page } from "~/components/section1.tsx";
 import { Section2Page } from "~/components/section2.tsx";
-import { Empty, NewsTitle } from "~/components/common.tsx";
+import { Empty, FadeInSection, NewsTitle } from "~/components/common.tsx";
 
 import {
   CloseButton,
@@ -26,13 +26,20 @@ export function Header({ onClick }: { onClick?: () => void }) {
       <a href="#main">
         事業紹介
         <div class="dropDown">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a>車用品 卸販売・外注取付事業</a>
+          <a>車用品 EC事業</a>
+          <a>自社商品開発事業</a>
         </div>
       </a>
       <a href="#feature">お知らせ</a>
-      <a href="#install">会社情報</a>
+      <a href="#install">
+        会社情報
+        <div class="dropDown">
+          <a>車用品 卸販売・外注取付事業</a>
+          <a>車用品 EC事業</a>
+          <a>自社商品開発事業</a>
+        </div>
+      </a>
       <a href="/doc">採用情報</a>
       <a href="/doc">ソーシャルメディア</a>
       <a href="/doc">お問い合わせ</a>
@@ -48,7 +55,9 @@ export function Home() {
   };
   return (
     <>
-      <Header onClick={toggleOpen} />
+      <FadeInSection>
+        <Header onClick={toggleOpen} />
+      </FadeInSection>
       <SideBar isOpen={isOpen}>
         <MenuGridContext>
           <MenuBlur />
