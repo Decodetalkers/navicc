@@ -4,6 +4,7 @@ import {
   Text,
   UnitAll,
   UnitImg,
+  ViewAll,
 } from "~/styles/newscomponent.ts";
 
 export function NewsMainArea() {
@@ -47,6 +48,13 @@ export function NewsMainArea() {
           </Text>
         </UnitAll>
       </NewsContent>
+      <ViewAll>
+        <h3>
+          <span>
+            <a href="https://www.navic.cc/news">VIEW ALL</a>
+          </span>
+        </h3>
+      </ViewAll>
     </NewsMain>
   );
 }
