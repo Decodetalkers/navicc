@@ -73,7 +73,6 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
     box-sizing: border-box;
     color: #4e7295ff;
     overflow: visible;
-    z-index: 999;
   }
   & a:hover .dropDown {
     display: block;
