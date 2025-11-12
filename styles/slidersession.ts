@@ -18,7 +18,6 @@ export const Sliders = styled.div`
   scroll-snap-type: x mandatory;
   grid-column: 4;
   grid-row: 2/9;
-  //border: 5px solid red;
   & img {
     width: 100%;
     height: 100%;
