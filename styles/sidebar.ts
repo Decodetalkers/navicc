@@ -9,7 +9,6 @@ const SideBar = styled.div<
 >`
   width: 100%;
   height: 100%;
-  background-color: white;
   position: fixed;
   top: ${({ top }) => top ? top : 0}px;
   z-index: ${({ zIndex }) => zIndex ? zIndex : 8};
@@ -52,6 +51,43 @@ export const CloseButton = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   border: none;
+`;
+
+export const MenuGridContext = styled.div`
+  position: relative;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 6fr 4fr;
+`;
+
+export const MenuBlur = styled.div`
+  position: relative;
+  height: 100%;
+  width: auto;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+  grid-column: 1;
+  grid-row: 1;
+  display: block;
+`;
+
+export const MenuRight = styled.div`
+  position: relative;
+  height: 100%;
+  width: auto;
+  grid-column: 1/3;
+  background-color: white;
+  @media screen and (min-width: 600px) {
+    grid-column: 2/3;
+  }
+
+  grid-row: 1;
+  display: block;
 `;
 
 export const MenuList = styled.nav`

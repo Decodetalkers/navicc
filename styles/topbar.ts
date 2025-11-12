@@ -5,10 +5,12 @@ const Header = styled.header`
   border-bottom: 1px;
   height: auto;
   display: grid;
-  grid-template_columns: auto auto;
-  margin-left: 10px;
-  z-index: 10;
+  grid-template-columns: auto auto;
   overflow: visible;
+  width: 100%;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: auto 120px;
+  }
 `;
 
 const Icon = styled.div`
@@ -19,7 +21,7 @@ const Icon = styled.div`
   }
   @media screen and (max-width: 900px) {
     & img {
-      width: 350px;
+      width: 280px;
     }
   }
 `;
