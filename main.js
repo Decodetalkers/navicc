@@ -36,7 +36,6 @@ var K,m,je,nn,$,we,Ne,Ee,Te,le,se,ce,rn,B={},Le=[],on=/acit|ex(?:s|g|n|p|$)|rph|
    display: block;
   }
 `;var qn=We.generate(),yn=d.nav`
-  backdrop-filter: blur(10px);
   background-color: ${({isdark:e})=>e?"#111111":"white"};
   overflow: visible;
   margin-left: 0;
