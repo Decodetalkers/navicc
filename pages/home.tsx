@@ -1,7 +1,7 @@
 import { MainTopBar as TitleBar } from "~/components/titlebar.tsx";
 import { Section1Page } from "~/components/section1.tsx";
 import { Section2Page } from "~/components/section2.tsx";
-import { Empty, FadeInSection, NewsTitle } from "~/components/common.tsx";
+import { Empty, NewsTitle } from "~/components/common.tsx";
 
 import {
   CloseButton,
@@ -55,9 +55,7 @@ export function Home() {
   };
   return (
     <>
-      <FadeInSection>
-        <Header onClick={toggleOpen} />
-      </FadeInSection>
+      <Header onClick={toggleOpen} />
       <SideBar isOpen={isOpen}>
         <MenuGridContext>
           <MenuBlur />
