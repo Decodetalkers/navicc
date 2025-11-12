@@ -39,7 +39,9 @@ const SideBar = styled.div<
   }
 `;
 
-export const CloseButton = styled.button`
+export const CloseButton = styled.div`
+  background-color: transparent;
+  cursor: pointer;
   height: 50px;
   width: 50px;
   position: sticky;
@@ -47,6 +49,10 @@ export const CloseButton = styled.button`
   margin-left: 85%;
   margin-top: 40px;
   color: blue;
+  background-image: url("static/cross.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 `;
 
 export const MenuList = styled.nav`
@@ -84,10 +90,21 @@ export const NormalLabel = styled.span`
     text-decoration: none;
   }
 `;
-export const Arrow = styled.button`
+export const Arrow = styled.div<{ ishidden?: boolean }>`
   grid-column: 2;
-  width: 20px;
-  height: 20px;
+  width: auto;
+  height: 100%;
+  background-image: ${({ ishidden }) => {
+    return ishidden
+      ? 'url("static/arrow-down.svg")'
+      : 'url("static/arrow-up.svg")';
+  }};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 `;
 
 const SideBarA = styled.a<{ isBottom?: boolean }>`

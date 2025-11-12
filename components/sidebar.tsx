@@ -41,7 +41,7 @@ function MenuUnit({ title, menu }: { title: string; menu: MenuInner[] }) {
 
   return (
     <>
-      <Arrow type="button" onClick={onToggled}>x</Arrow>
+      <Arrow onClick={onToggled} ishidden={hidden} />
       <Label onClick={onToggled}>{title}</Label>
 
       {menu.map(({ context, url }, index) => {

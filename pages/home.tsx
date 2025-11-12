@@ -43,11 +43,9 @@ export function Home() {
   return (
     <>
       <Header />
-      <MenuButton isOpen={isOpen} onClick={() => toggleOpen()} />
+      <MenuButton isOpen={isOpen} onClick={toggleOpen} />
       <SideBar isOpen={isOpen} autohide>
-        <CloseButton type="button" onClick={toggleOpen}>
-          x
-        </CloseButton>
+        <CloseButton type="button" onClick={toggleOpen} />
         <SideMenu />
       </SideBar>
       <Section1Page />
