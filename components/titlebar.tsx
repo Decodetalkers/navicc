@@ -1,9 +1,14 @@
 import { PropsWithChildren } from "react";
 
 import TopBarClass, { Header, Icon } from "~/styles/topbar.ts";
+import { MenuButton, MenuButtonDiv } from "~/styles/sidebar.ts";
+
+export type MainTopBarProps = {
+  onClick?: () => void;
+};
 
 export function MainTopBar(
-  { children }: PropsWithChildren,
+  { children, onClick }: PropsWithChildren<MainTopBarProps>,
 ) {
   return (
     <Header>
@@ -11,6 +16,9 @@ export function MainTopBar(
       <TopBarClass autohide>
         {children}
       </TopBarClass>
+      <MenuButtonDiv>
+        <MenuButton onClick={onClick} />
+      </MenuButtonDiv>
     </Header>
   );
 }

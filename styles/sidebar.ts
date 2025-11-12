@@ -120,22 +120,27 @@ const SideBarA = styled.a<{ isBottom?: boolean }>`
   }
 `;
 
-const MenuButton = styled.button<
-  { isOpen?: boolean; alwaysShown?: boolean; top?: number }
->`
-  position: fixed;
-  top: ${({ top }) => top ? top : 20}px;
-  right: 20px;
-  background-color: white;
+const MenuButtonDiv = styled.div`
+  grid-column: 2/2;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  grid-row: 1;
+  margin-right: 20px;
+`;
+
+const MenuButton = styled.button`
+  background-color: #73acdeff;
+
   color: white;
   border: none;
-  border-radius: 50%;
+  border-radius: 25%;
   width: 50px;
   height: 50px;
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  visibility: ${({ alwaysShown }) => alwaysShown ? "visible" : "hidden"};
+  visibility: hidden;
   background-image: url("static/menu.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -182,4 +187,4 @@ const SearchButton = styled.button<
   }
 `;
 
-export { MenuButton, SearchButton, SideBar, SideBarA };
+export { MenuButton, MenuButtonDiv, SearchButton, SideBar, SideBarA };

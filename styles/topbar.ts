@@ -17,6 +17,11 @@ const Icon = styled.div`
   & img {
     width: 250px;
   }
+  @media screen and (max-width: 900px) {
+    & img {
+      width: 350px;
+    }
+  }
 `;
 
 const DropDownGroup = ["dropDown"] as const;

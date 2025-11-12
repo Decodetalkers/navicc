@@ -52,7 +52,6 @@ export const ViewAll = styled.div`
 
   & h3 {
     font-size: 40px;
-
   }
   & a {
     color: #14508cff;

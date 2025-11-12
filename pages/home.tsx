@@ -3,7 +3,7 @@ import { Section1Page } from "~/components/section1.tsx";
 import { Section2Page } from "~/components/section2.tsx";
 import { Empty, NewsTitle } from "~/components/common.tsx";
 
-import { CloseButton, MenuButton, SideBar } from "~/styles/sidebar.ts";
+import { CloseButton, SideBar } from "~/styles/sidebar.ts";
 
 import { useState } from "preact/hooks";
 import { CenterTitle } from "~/components/centertitle.tsx";
@@ -14,9 +14,9 @@ import { CenterArea } from "~/components/centersession.tsx";
 import { Foot } from "~/components/foot.tsx";
 import { SideMenu } from "~/components/sidebar.tsx";
 
-export function Header() {
+export function Header({ onClick }: { onClick?: () => void }) {
   return (
-    <TitleBar>
+    <TitleBar onClick={onClick}>
       <a href="#main">
         事業紹介
         <div class="dropDown">
@@ -42,8 +42,7 @@ export function Home() {
   };
   return (
     <>
-      <Header />
-      <MenuButton isOpen={isOpen} onClick={toggleOpen} />
+      <Header onClick={toggleOpen} />
       <SideBar isOpen={isOpen} autohide>
         <CloseButton type="button" onClick={toggleOpen} />
         <SideMenu />
