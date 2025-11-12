@@ -3,7 +3,6 @@ import styled from "@nobody/styled-components-deno";
 const SideBar = styled.div<
   {
     isOpen?: boolean;
-    autohide?: boolean;
     zIndex?: number;
     top?: string;
   }
@@ -14,9 +13,8 @@ const SideBar = styled.div<
   position: fixed;
   top: ${({ top }) => top ? top : 0}px;
   z-index: ${({ zIndex }) => zIndex ? zIndex : 8};
-  visibility: ${({ autohide }) => autohide ? "hidden" : "visible"};
   list-style-type: none;
-  display: flex;
+  display: none;
   /* move flex-items in column */
   flex-direction: column;
 
@@ -25,6 +23,7 @@ const SideBar = styled.div<
 
   @media screen and (max-width: 900px) {
     visibility: visible;
+    display: flex;
   }
   & button {
     text-align: center;
@@ -61,6 +60,7 @@ export const MenuList = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr 7fr 1fr;
   gap: 4px;
+  position: relative;
 `;
 
 export const Label = styled.span<{ hidden?: boolean }>`

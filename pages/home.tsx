@@ -43,7 +43,7 @@ export function Home() {
   return (
     <>
       <Header onClick={toggleOpen} />
-      <SideBar isOpen={isOpen} autohide>
+      <SideBar isOpen={isOpen}>
         <CloseButton type="button" onClick={toggleOpen} />
         <SideMenu />
       </SideBar>
