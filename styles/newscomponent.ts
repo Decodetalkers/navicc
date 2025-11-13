@@ -38,6 +38,30 @@ export const Text = styled.div`
     font-size: 12px;
     color: #32679bff;
   }
+  @media screen and (max-width: 700px) {
+    & h1 {
+      font-size: 16px;
+    }
+    & h3 {
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    & h1 {
+      font-size: 14px;
+    }
+    & h3 {
+      font-size: 8px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    & h1 {
+      font-size: 10px;
+    }
+    & h3 {
+      font-size: 6px;
+    }
+  }
 `;
 
 export const UnitAll = styled.div`
