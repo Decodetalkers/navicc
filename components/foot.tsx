@@ -7,15 +7,18 @@ import {
   FootEmployment,
   FootInformation,
   FootIntroduction,
+  FootMainArea,
   FootMedia,
   FootOtherDetail,
   FootSession,
-  FootTextArea,
   FootTitle,
   FootTopArea,
+  LogoPart,
+  RightPart,
   SNSBtn,
   SNSPart,
   SNSPartInner,
+  SNSRightPart,
 } from "~/styles/foot.ts";
 import { PropsWithChildren } from "react";
 
@@ -23,7 +26,7 @@ export function Foot() {
   return (
     <FootSession>
       <FootTopArea>
-        <FootTextArea>
+        <FootMainArea>
           <FootTitle>
             <h4>TOP</h4>
             <h4>お知らせ</h4>
@@ -95,7 +98,43 @@ export function Foot() {
             <h4>特定商取引法に基づく表記</h4>
             <h4>個人情報の保護</h4>
           </FootOtherDetail>
-        </FootTextArea>
+        </FootMainArea>
+        <RightPart>
+          <LogoPart>
+            <img src="static/navic_logo2.png" />
+          </LogoPart>
+          <SNSRightPart>
+            <SNSPartInner>
+              <SNSButton
+                img="static/youtube.svg"
+                url="https://www.youtube.com/channel/UCgWqi12hhPgunsA2_-U9pGg"
+              >
+                NAVIC<br />公式チャンネル
+              </SNSButton>
+              <SNSButton
+                img="static/youtube.svg"
+                url="https://www.youtube.com/channel/UCvsr7nZnUU0BnzITiSD-fpg"
+              >
+                CLEZEED<br />
+                公式チャンネル
+              </SNSButton>
+              <SNSButton
+                img="static/youtube.svg"
+                url="https://www.youtube.com/channel/UCvsr7nZnUU0BnzITiSD-fpg"
+              >
+                豊橋<br />
+                モーターズ
+              </SNSButton>
+              <SNSButton
+                img="static/tiktok.svg"
+                url="https://www.tiktok.com/@navic.inc?_t=ZS-8tJwnPeJqDI&_r=1"
+              >
+                NAVIC公式<br />
+                TikTok
+              </SNSButton>
+            </SNSPartInner>
+          </SNSRightPart>
+        </RightPart>
       </FootTopArea>
       <CopyRight>
         <h5>

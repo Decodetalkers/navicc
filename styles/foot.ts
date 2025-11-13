@@ -19,11 +19,14 @@ export const CopyRight = styled.div`
 `;
 
 export const SNSPart = styled.div`
-  display: flex;
+  display: none;
   flex-direction: flow;
   justify-content: center;
   background-color: #053769ff;
   gap: 10%;
+  @media screen and (max-width: 900px) {
+    display: flex;
+  }
 `;
 export const SNSPartInner = styled.div`
   display: flex;
@@ -68,29 +71,76 @@ export const FootTopArea = styled.div`
   background-color: #053769ff;
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    "left ."
+    "left right";
+
   height: auto;
   min-width: 900px;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
-export const FootTextArea = styled.div`
+export const FootMainArea = styled.div`
   display: grid;
-  width: 100%;
 
-  margin-left: 20%;
-  margin-right: 20%;
+  grid-area: left;
+  margin-left: 10%;
+  margin-right: 2%;
   margin-top: 8%;
   margin-bottom: 1%;
   gap: 10px 40px;
 
   grid-template-areas:
-    "navigation . . ."
-    "information introduction employment media"
-    "information introduction employment media"
-    "information introduction employment other"
-    "information introduction employment .";
+    "navigation . . . "
+    "information introduction employment media "
+    "information introduction employment media "
+    "information introduction employment other "
+    "information introduction employment .  ";
 `;
+export const RightPart = styled.div`
+  grid-area: right;
+  height: auto;
+  display: grid;
+  margin-top: 0;
+  gap: 0;
+  grid-template-areas:
+    "sns"
+    "icon";
+`;
+export const SNSRightPart = styled.div`
+  grid-area: sns;
+  height: auto;
+  margin-top: 0;
+  display: flex;
+  flex-direction: flow;
+  justify-content: center;
+  background-color: #053769ff;
+  gap: 10%;
+`;
+export const LogoPart = styled.div`
+  grid-area: icon;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  position: relative;
+  top: -60%;
+  display: flex;
+  height: auto;
 
+  & img {
+    object-fit: cover;
+    width: 65%;
+  }
+  @media screen and (max-width: 900px) {
+    & img {
+      width: 45%;
+    }
+  }
+`;
 export const FootTitle = styled.div`
   grid-area: navigation;
   & h4 {
