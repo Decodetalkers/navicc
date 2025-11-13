@@ -24,6 +24,16 @@ const Icon = styled.div`
       width: 280px;
     }
   }
+  @media screen and (min-width: 1200px) {
+    & img {
+      width: 300px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    & img {
+      width: 480px;
+    }
+  }
 `;
 
 const DropDownGroup = ["dropDown"] as const;
