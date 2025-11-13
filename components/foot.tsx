@@ -24,13 +24,18 @@ import {
 import { PropsWithChildren } from "react";
 
 export function Foot() {
+  const scrollToTop = () => {
+    globalThis.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <FootSession>
       <FootTopOutArea>
         <FootTopArea>
           <FootMainArea>
             <FootTitle>
-              <h4>TOP</h4>
+              <a onClick={scrollToTop}>
+                <h4>TOP</h4>
+              </a>
               <h4>お知らせ</h4>
               <h4>お問い合わせ</h4>
             </FootTitle>

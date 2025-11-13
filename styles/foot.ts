@@ -92,6 +92,10 @@ export const FootTopArea = styled.div`
 
   height: auto;
   min-width: 1000px;
+  & a {
+    text-decoration: none;
+    cursor: pointer;
+  }
 `;
 
 export const FootMainArea = styled.div`
