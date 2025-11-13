@@ -1,6 +1,6 @@
 import styled from "@nobody/styled-components-deno";
 
-export const FootSession = styled.section`
+export const FootSession = styled.footer`
   position: relative;
 `;
 
@@ -19,11 +19,14 @@ export const CopyRight = styled.div`
 `;
 
 export const SNSPart = styled.div`
-  display: flex;
+  display: none;
   flex-direction: flow;
   justify-content: center;
   background-color: #053769ff;
   gap: 10%;
+  @media screen and (max-width: 900px) {
+    display: flex;
+  }
 `;
 export const SNSPartInner = styled.div`
   display: flex;
@@ -62,4 +65,182 @@ export const SNSBtn = styled.span`
       width: 100px;
     }
   }
+`;
+
+export const FootTopOutArea = styled.div`
+  background-color: #053769ff;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+  @media screen and (min-width: 1500px) {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+`;
+
+export const FootTopArea = styled.div`
+  width: 100%;
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    "left ."
+    "left right";
+
+  height: auto;
+  min-width: 1000px;
+`;
+
+export const FootMainArea = styled.div`
+  display: grid;
+
+  grid-area: left;
+  margin-left: 10%;
+  margin-right: 2%;
+  margin-top: 8%;
+  margin-bottom: 1%;
+  gap: 10px 40px;
+
+  grid-template-areas:
+    "navigation . . . "
+    "information introduction employment media "
+    "information introduction employment media "
+    "information introduction employment other "
+    "information introduction employment .  ";
+`;
+export const RightPart = styled.div`
+  grid-area: right;
+  height: auto;
+  display: grid;
+  margin-top: 0;
+  gap: 0;
+  grid-template-areas:
+    "sns"
+    "icon";
+`;
+export const SNSRightPart = styled.div`
+  grid-area: sns;
+  height: auto;
+  margin-top: 0;
+  display: flex;
+  flex-direction: flow;
+  justify-content: center;
+  background-color: #053769ff;
+  gap: 10%;
+`;
+export const LogoPart = styled.div`
+  grid-area: icon;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  height: auto;
+  top: -50%;
+  & img {
+    object-fit: cover;
+    width: 65%;
+  }
+  @media screen and (max-width: 1000px) {
+    top: -80%;
+  }
+  @media screen and (max-width: 900px) {
+    & img {
+      width: 45%;
+    }
+  }
+`;
+export const FootTitle = styled.div`
+  grid-area: navigation;
+  & h4 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 15px;
+    color: white;
+  }
+  margin-bottom: 4px;
+  @media screen and (max-width: 1200px) {
+    & h4 {
+      font-size: 13px;
+    }
+  }
+`;
+
+export const FootOtherDetail = styled.div`
+  grid-area: other;
+  & h4 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: white;
+  }
+  @media screen and (max-width: 1200px) {
+    & h4 {
+      font-size: 13px;
+    }
+  }
+`;
+export const FootInformation = styled.div`
+  grid-area: information;
+`;
+
+export const FootIntroduction = styled.div`
+  grid-area: introduction;
+`;
+
+export const FootEmployment = styled.div`
+  grid-area: employment;
+`;
+export const FootMedia = styled.div`
+  grid-area: media;
+`;
+export const FootDetailArea = styled.div`
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "title title"
+    "line menu";
+  grid-template-columns: 10px auto;
+  & h5 {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 12px;
+    color: white;
+  }
+  & h4 {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 15px;
+    color: white;
+  }
+  @media screen and (max-width: 1200px) {
+    & h5 {
+      font-size: 9px;
+    }
+    & h4 {
+      font-size: 13px;
+    }
+  }
+`;
+
+export const FootDetailLine = styled.div`
+  display: block;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 0;
+  grid-area: line;
+  width: 2px;
+`;
+export const FootDetailTitle = styled.div`
+  display: block;
+  margin-top: 0;
+  grid-area: title;
+`;
+export const FootDetailMenu = styled.div`
+  display: block;
+  margin-top: 0;
+  grid-area: menu;
 `;
