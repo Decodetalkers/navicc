@@ -67,10 +67,23 @@ export const SNSBtn = styled.span`
   }
 `;
 
-export const FootTopArea = styled.div`
+export const FootTopOutArea = styled.div`
   background-color: #053769ff;
   width: 100%;
   display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+  @media screen and (min-width: 1500px) {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+`;
+
+export const FootTopArea = styled.div`
+  width: 100%;
+  display: grid;
+  grid-column: 2;
   grid-template-columns: 7fr 5fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas:
@@ -78,10 +91,7 @@ export const FootTopArea = styled.div`
     "left right";
 
   height: auto;
-  min-width: 900px;
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
+  min-width: 1000px;
 `;
 
 export const FootMainArea = styled.div`
@@ -127,13 +137,15 @@ export const LogoPart = styled.div`
   justify-self: center;
   justify-content: center;
   position: relative;
-  top: -60%;
   display: flex;
   height: auto;
-
+  top: -50%;
   & img {
     object-fit: cover;
     width: 65%;
+  }
+  @media screen and (max-width: 1000px) {
+    top: -80%;
   }
   @media screen and (max-width: 900px) {
     & img {
@@ -150,6 +162,11 @@ export const FootTitle = styled.div`
     color: white;
   }
   margin-bottom: 4px;
+  @media screen and (max-width: 1200px) {
+    & h4 {
+      font-size: 13px;
+    }
+  }
 `;
 
 export const FootOtherDetail = styled.div`
@@ -159,6 +176,11 @@ export const FootOtherDetail = styled.div`
     margin-bottom: 4px;
     font-size: 14px;
     color: white;
+  }
+  @media screen and (max-width: 1200px) {
+    & h4 {
+      font-size: 13px;
+    }
   }
 `;
 export const FootInformation = styled.div`
@@ -193,6 +215,14 @@ export const FootDetailArea = styled.div`
     margin-bottom: 7px;
     font-size: 15px;
     color: white;
+  }
+  @media screen and (max-width: 1200px) {
+    & h5 {
+      font-size: 9px;
+    }
+    & h4 {
+      font-size: 13px;
+    }
   }
 `;
 
