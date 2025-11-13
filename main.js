@@ -21,6 +21,16 @@ var ee,m,Le,kn,M,Te,Pe,De,Me,fe,pe,he,Sn,R={},Ie=[],Cn=/acit|ex(?:s|g|n|p|$)|rph
       width: 280px;
     }
   }
+  @media screen and (min-width: 1200px) {
+    & img {
+      width: 300px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    & img {
+      width: 480px;
+    }
+  }
 `,Hn=["dropDown"],Je=new I(Hn,"dropDown");Je.setCSS("dropDown")`
   display: none;
   position: absolute;
