@@ -70,21 +70,33 @@ export const FootTopArea = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   height: auto;
+  min-width: 900px;
 `;
 
 export const FootTextArea = styled.div`
   display: grid;
   width: 100%;
 
-  gap: 3px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 8%;
+  margin-bottom: 1%;
+  gap: 30px;
 
   grid-template-areas:
-    "navigation . ."
-    "information  introduction media";
+    "navigation . . ."
+    "information introduction employment media";
 `;
 
 export const FootTitle = styled.div`
   grid-area: navigation;
+  & h4 {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 17px;
+    color: white;
+  }
+  margin-bottom: 16px;
 `;
 export const FootInformation = styled.div`
   grid-area: information;
@@ -93,18 +105,49 @@ export const FootInformation = styled.div`
 export const FootIntroduction = styled.div`
   grid-area: introduction;
 `;
+
+export const FootEmployment = styled.div`
+  grid-area: employment;
+`;
+export const FootMedia = styled.div`
+  grid-area: media;
+`;
 export const FootDetailArea = styled.div`
   display: grid;
-  gap: 3px;
+  gap: 5px;
   grid-template-areas:
     "title title"
     "line menu";
-  grid-template-columns: "1px auto";
+  grid-template-columns: 10px auto;
+  & h5 {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 12px;
+    color: white;
+  }
+  & h4 {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 17px;
+    color: white;
+  }
 `;
 
 export const FootDetailLine = styled.div`
   display: block;
   background-color: white;
-  margin-bottom: 1%;
+  margin-bottom: 15px;
   margin-top: 0;
+  grid-area: line;
+  width: 2px;
+`;
+export const FootDetailTitle = styled.div`
+  display: block;
+  margin-top: 0;
+  grid-area: title;
+`;
+export const FootDetailMenu = styled.div`
+  display: block;
+  margin-top: 0;
+  grid-area: menu;
 `;
