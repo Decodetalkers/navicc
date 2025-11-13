@@ -50,7 +50,8 @@ export function SliderSection() {
       const currentPlace = target.scrollLeft;
       const clientWidth = target.clientWidth;
       target.scrollTo({
-        left: currentPlace + clientWidth,
+        // TODO: fix the problem
+        left: currentPlace + clientWidth + 10,
         behavior: "smooth",
       });
     }
