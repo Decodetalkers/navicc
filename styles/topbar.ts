@@ -83,7 +83,16 @@ const TopBar = styled.nav<{ isdark?: boolean; autohide?: boolean }>`
   & a:hover .dropDown {
     display: block;
   }
-
+  @media screen and (max-width: 1100px) {
+    & a {
+      font-size: 1.4vw;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    & a {
+      font-size: 1.32vw;
+    }
+  }
   @media screen and (max-width: 900px) {
     visibility: ${({ autohide }) => {
       if (autohide) {

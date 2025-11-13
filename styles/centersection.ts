@@ -5,7 +5,7 @@ export const CenterSection = styled.section`
   position: relative;
   justify-self: stretch;
   pointer-event: auto;
-  grid-template_columns: minmax(0px, 1fr);
+  grid-template-columns: minmax(0px, 1fr);
   background-color: #d1e2f0ff;
   width: 100%;
 `;
@@ -77,8 +77,7 @@ function getPosition(place?: number): Position {
 
 // deno-fmt-ignore
 export const Circle = styled.div<{place?: number}>`
-  aspect-ratio: 1;
-  height: auto;
+  aspect-ratio: 1 / 1;
   display: grid;
   grid-area: 1/1/2/2;
   align-self: start;
@@ -106,16 +105,21 @@ export const Circle = styled.div<{place?: number}>`
 export const CircleText = styled.div`
   text-align: center;
   align-items: center;
+  align-self: center;
   justify-content: center;
   color: #053769ff;
   width: 100%;
   gap: 0;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
   & h2 {
     font-size: 33px;
     font-weight: bold;
     margin: 0;
+    grid-column: 1/4;
+    grid-row: 1;
   }
 
   & br {
@@ -124,14 +128,27 @@ export const CircleText = styled.div`
   }
   & img {
     margin: 0;
-    width: 80%;
+    width: 100%;
+    object-fit: contain;
+    grid-column: 2;
+    max-height: 150px;
   }
   @media screen and (max-width: 900px) {
+    grid-template-columns: 2fr 4fr 2fr;
     & h2 {
-      font-size: 22px;
+      font-size: 15px;
     }
     & img {
-      width: 60%;
+      object-fit: contain;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 2fr 2fr 2fr;
+    & h2 {
+      font-size: 12px;
+    }
+    & img {
+      object-fit: contain;
     }
   }
   position: relative;
