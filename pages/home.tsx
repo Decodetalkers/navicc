@@ -15,7 +15,7 @@ import { useState } from "preact/hooks";
 import { CenterTitle } from "~/components/centertitle.tsx";
 import { SliderSection } from "~/components/slidersession.tsx";
 import { NewsMainArea } from "~/components/newsarea.tsx";
-import { LinkSectionArea } from "~/components/Link.tsx";
+import { LinkSectionArea } from "~/components/link.tsx";
 import { CenterArea } from "~/components/centersession.tsx";
 import { Foot } from "~/components/foot.tsx";
 import { SideMenu } from "~/components/sidebar.tsx";
