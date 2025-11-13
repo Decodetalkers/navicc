@@ -8,6 +8,7 @@ import {
   FootInformation,
   FootIntroduction,
   FootMedia,
+  FootOtherDetail,
   FootSession,
   FootTextArea,
   FootTitle,
@@ -90,6 +91,10 @@ export function Foot() {
               </FootDetailMenu>
             </FootDetailArea>
           </FootMedia>
+          <FootOtherDetail>
+            <h4>特定商取引法に基づく表記</h4>
+            <h4>個人情報の保護</h4>
+          </FootOtherDetail>
         </FootTextArea>
       </FootTopArea>
       <CopyRight>

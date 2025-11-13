@@ -81,22 +81,35 @@ export const FootTextArea = styled.div`
   margin-right: 20%;
   margin-top: 8%;
   margin-bottom: 1%;
-  gap: 30px;
+  gap: 10px 40px;
 
   grid-template-areas:
     "navigation . . ."
-    "information introduction employment media";
+    "information introduction employment media"
+    "information introduction employment media"
+    "information introduction employment other"
+    "information introduction employment .";
 `;
 
 export const FootTitle = styled.div`
   grid-area: navigation;
   & h4 {
     margin-top: 0;
-    margin-bottom: 7px;
-    font-size: 17px;
+    margin-bottom: 4px;
+    font-size: 15px;
     color: white;
   }
-  margin-bottom: 16px;
+  margin-bottom: 4px;
+`;
+
+export const FootOtherDetail = styled.div`
+  grid-area: other;
+  & h4 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: white;
+  }
 `;
 export const FootInformation = styled.div`
   grid-area: information;
@@ -128,7 +141,7 @@ export const FootDetailArea = styled.div`
   & h4 {
     margin-top: 0;
     margin-bottom: 7px;
-    font-size: 17px;
+    font-size: 15px;
     color: white;
   }
 `;
